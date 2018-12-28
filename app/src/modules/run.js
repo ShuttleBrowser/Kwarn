@@ -13,7 +13,7 @@ const run = {
     path = path.replace(/\\/g,"/")
 
     let args = {
-      id: require(`${path}/package.json`).name,
+      id: require(`${path}/app.json`).name + `${Math.floor(Math.random() * (1000 - 1) + 1)}`,
       icon: `${path}/icon.png`,
       url: `${path}/app/index.html`
     }

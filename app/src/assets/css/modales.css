@@ -8,4 +8,50 @@
   z-index: 100;
   background-color: white;
   display: none;
+  padding: 30px;
+}
+
+.box {
+  width: 100%;
+  height: 35px;
+  border-width: 0px;
+  border-radius: 25px;
+  background-color: #fafafa;
+  margin-bottom: 27px;
+  padding-left: 15px;
+  font-size: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.box::placeholder {
+  color: #c3c3c3;
+}
+
+.close-btn {
+  background: url(../img/close.svg) no-repeat center;
+  background-size: 100% 100%;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal-title {
+  position: absolute;
+  top: 17px;
+  margin: 0;
+}
+
+.modal-content {
+  position: relative;
+  top: 50px;
+}
+
+.action-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }

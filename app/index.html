@@ -6,32 +6,55 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Kwarn</title>
 
-  <script src="./src/assets/js/vex.combined.min.js"></script>
-  <script>vex.defaultOptions.className = 'vex-theme-default'</script>
-  <link rel="stylesheet" href="./src/assets/css/vex.css" />
-  <link rel="stylesheet" href="./src/assets/css/vex-theme-default.css" />
-
   <link rel="stylesheet" href="./src/assets/css/modales.css" />
+  <link rel="stylesheet" href="./src/assets/css/main.css" />
+  <link rel="stylesheet" href="./src/assets/fonts/SourceSansPro.css">
 </head>
 <body>
-  <button onclick="create.modale(true)">Create your app</button>
-  <button onclick="run.choose()">Run your app</button>
-  <button onclick="publish.modale(true)">Publish your app</button>
+  <div class="app-content">
+    <div class="app-header">
+        <h1 class="app-main-title">KWARN</h1>
+        <div class="graph"></div>
+    </div>
+    <div class="app-body">
+      <h3 class="title">WELCOME ON KWARN</h3>
+      <p>You can test, develop and publish your app for the Shuttle's store.</p>
+      <hr class="separator">
+      <h3 class="title">GET STARTED</h3>
+      <p>Do you wanna create your app ? Check out the <a href="#">documentation</a></p>
+    </div>
+    <div class="app-footer">
+        <li><a href="#" class="button" onclick="create.modale(true)">Create your app</a></li>
+        <li><a href="#" class="button" onclick="run.choose()">Run your app</button></li>
+        <li><a href="#" class="button" onclick="publish.modale(true)">Publish your app</a></li>
+  </div>
 
   <div class="modale" id="create-app">
-    <input id="createapp-appName" type="text" placeholder="Name" />
-    <input id="createapp-appVersion" type="text" placeholder="Version" />
-    <a href="#" onclick="create.generate()">Create</a>
-    <a href="#" onclick="create.modale(false)">Close</a>
+    <h3 class="modal-title">CREATE</h3>
+    <a href="#" class="close-btn" onclick="create.modale(false)"></a>
+
+    <div class="modal-content">
+        <input id="createapp-appName" class="box" type="text" placeholder="Name" />
+        <input id="createapp-appDescritpion" class="box" type="text" placeholder="Description" />
+        <input id="createapp-appVersion" class="box" type="text" placeholder="Version" />
+      <button class="box" style="color: #c3c3c3;" id="createSelectApp" onclick="create.select()">Where do you want to create your app ?</button>
+    </div>
+
+    <a href="#" class="button action-btn" onclick="create.generate()">Create</a>
   </div>
 
   <div class="modale" id="publish-app">
-    <a href="#" onclick="publish.select()">Select APP</a> <span id="publishApp-appName-toShow"></span>
-    <input id="publishApp-appDescription" type="text" placeholder="Description" />
-    <input id="publishApp-appKeywords" type="text" placeholder="Keywords separated by spaces" />
-    <input id="publishApp-GitURL" type="text" placeholder="URS to a Git repo" />
-    <a href="#" onclick="publish.send()">Publish</a>
-    <a href="#" onclick="publish.modale(false)">Close</a>
+    <h3 class="modal-title">PUBLISH</h3>
+    <a href="#" class="close-btn" onclick="publish.modale(false)"></a>
+
+    <div class="modal-content">
+      <button class="box" style="color: #c3c3c3;" id="publishSelectApp" onclick="publish.select()">Select your application</button>
+      <input id="publishApp-appDescription" class="box" type="text" placeholder="Description" />
+      <input id="publishApp-appVersion" class="box" type="text" placeholder="Version" />
+      <input id="publishApp-appKeywords" class="box" type="text" placeholder="Keywords separated by spaces" />
+    </div>
+
+    <a href="#" class="button action-btn" onclick="publish.send()">Publish</a>
   </div>
 
 </body>

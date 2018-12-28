@@ -1,6 +1,7 @@
 {
   "name":"Kwarn",
   "version":"1.0.0",
+  "description": "Test, develop, publish your application fot the Shuttle's store.",
   "git":"https://github.com/ShuttleBrowser/Kwarn",
   "author":"Robin Jullian"
 }
