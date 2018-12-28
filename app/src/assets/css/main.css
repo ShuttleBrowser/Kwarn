@@ -1,0 +1,68 @@
+:root {
+  --pink: #E71F5F;
+  --gray: #919192;
+}
+
+body {
+  font-family: 'Source Sans Pro';
+  margin: 0;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--pink)
+}
+
+.app-content {
+  margin: 46px;
+}
+
+.app-main-title {
+  color: var(--pink);
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.graph {
+  background: url(../img/graph.svg) no-repeat center;
+  background-size: contain;
+  margin-top: 30px;
+  width: 100%;
+  height: 60px;
+}
+
+.app-body {
+  text-align: center;
+  margin: 15px;
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 17px;
+}
+
+p {
+  color: var(--gray)
+}
+
+.separator {
+  border-top: 2px solid var(--pink);
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.app-footer {
+  text-align: center;
+  margin: 15px;
+  margin-top: 40px;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.button {
+  border-bottom: 1.4px solid var(--pink)
+}
