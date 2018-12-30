@@ -14,8 +14,8 @@ const run = {
 
     let args = {
       id: require(`${path}/app.json`).name + `${Math.floor(Math.random() * (1000 - 1) + 1)}`,
-      icon: `${path}/icon.png`,
-      url: `${path}/app/index.html`
+      icon: `file://${path}/icon.png`,
+      url: `file:///${path}/app/index.html`
     }
 
     app.bookmarks.add(args.id, args.icon, args.url, 'app')
